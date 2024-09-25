@@ -23,8 +23,5 @@ COPY . .
 # Combine the commands, set non-interactive mode, and clean up cache
 RUN apt update && apt install -y openssh-client sshpass git
 
-RUN git show HEAD:your_json_file.json > latest.json
-RUN git show HEAD^:your_json_file.json > previous.json
-
 # Optional: Define an entry point or command for the container (if necessary)
 # CMD ["/bin/bash"]
